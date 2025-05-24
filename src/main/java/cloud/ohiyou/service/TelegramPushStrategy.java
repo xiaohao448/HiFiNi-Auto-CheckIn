@@ -32,7 +32,7 @@ public class TelegramPushStrategy implements IMessagePushStrategy {
         String telegramBotToken = EnvConfig.get().getTgBotToken();
 
         try {
-            String url = "https://api.telegram.org/bot" + telegramBotToken + "/sendMessage?chat_id=" + telegramChatId + "&text=" + URLEncoder.encode(message, "UTF-8");
+            String url = "https://api.telegram.org/bot" + telegramBotToken + "/sendMessage?chat_id=" + telegramChatId + "&text=HiFiNi签到消息:\n" + URLEncoder.encode(message, "UTF-8");
             Request request = new Request.Builder()
                     .url(url)
                     .build();
